@@ -567,7 +567,7 @@ export default function KanbanAnalyticsSuite() {
             Kanban Analytics Suite
             <Layers className="text-green-400" size={28} />
           </h1>
-          <p className="text-slate-400 text-sm">Monte Carlo Simülasyonu + CFD Analizi • Tek Veri Kaynağı</p>
+          <p className="text-slate-400 text-sm">Monte Carlo Simülasyonu + CFD Analizi • Designed By Sadık Algul</p>
         </div>
         
         {/* Progress Steps */}

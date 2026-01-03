@@ -615,6 +615,22 @@ export default function KanbanAnalyticsSuite() {
                 <option value="">Seçiniz...</option>
                 {columns.map(col => <option key={col} value={col}>{col}</option>)}
               </select>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3">
+                <div>
+                  <label className="text-xs text-cyan-200">PBI ID Kolonu</label>
+                  <select className="w-full p-2 border border-slate-600 rounded text-xs bg-slate-700 text-white" value={config.pbiIdColumn} onChange={(e) => setConfig({...config, pbiIdColumn: e.target.value})}>
+                    <option value="">Seçiniz...</option>
+                    {columns.map(col => <option key={col} value={col}>{col}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="text-xs text-cyan-200">PBI Adı Kolonu</label>
+                  <select className="w-full p-2 border border-slate-600 rounded text-xs bg-slate-700 text-white" value={config.pbiNameColumn} onChange={(e) => setConfig({...config, pbiNameColumn: e.target.value})}>
+                    <option value="">Seçiniz...</option>
+                    {columns.map(col => <option key={col} value={col}>{col}</option>)}
+                  </select>
+                </div>
+              </div>
             </div>
 
             {/* Station Columns */}
@@ -654,22 +670,6 @@ export default function KanbanAnalyticsSuite() {
             {/* Cycle Time Settings */}
             <div className="mb-4 p-4 border border-purple-500/30 rounded-xl bg-purple-500/5">
               <label className="text-sm font-medium text-purple-300 mb-2 block">⏱️ Cycle Time Ayarları (Opsiyonel)</label>
-              <div className="grid grid-cols-2 gap-2 mb-2">
-                <div>
-                  <label className="text-xs text-purple-200">PBI ID Kolonu</label>
-                  <select className="w-full p-2 border border-slate-600 rounded text-xs bg-slate-700 text-white" value={config.pbiIdColumn} onChange={(e) => setConfig({...config, pbiIdColumn: e.target.value})}>
-                    <option value="">Seçiniz...</option>
-                    {columns.map(col => <option key={col} value={col}>{col}</option>)}
-                  </select>
-                </div>
-                <div>
-                  <label className="text-xs text-purple-200">PBI Adı Kolonu</label>
-                  <select className="w-full p-2 border border-slate-600 rounded text-xs bg-slate-700 text-white" value={config.pbiNameColumn} onChange={(e) => setConfig({...config, pbiNameColumn: e.target.value})}>
-                    <option value="">Seçiniz...</option>
-                    {columns.map(col => <option key={col} value={col}>{col}</option>)}
-                  </select>
-                </div>
-              </div>
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <label className="text-xs text-purple-200">Start İstasyonu</label>
